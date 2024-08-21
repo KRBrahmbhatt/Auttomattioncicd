@@ -1,6 +1,6 @@
-package Rahulshettyacademy.pageobjects;
+package Rahulshettyacademy.tests.pageobjects;
 
-import Rahulshettyacademy.AbstractComponent.abstractcomponent;
+import Rahulshettyacademy.tests.AbstractComponent.abstractcomponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +22,8 @@ public class landingpage  extends abstractcomponent {
         WebElement password;
         @FindBy(id="login")
         WebElement submitbutton;
+        @FindBy(css = "[class*='flyInOut']")
+        WebElement errorMessage;
 
         public productCatalogue loginapplication(String email , String password1)
         {
@@ -31,6 +33,11 @@ public class landingpage  extends abstractcomponent {
             productCatalogue productCatalogue = new productCatalogue(driver);
             return productCatalogue;
 
+        }
+        public String getErrorMessage()
+        {
+            waitForElementTOAppear(errorMessage);
+            return errorMessage.getText();
         }
 
         public void goTo()

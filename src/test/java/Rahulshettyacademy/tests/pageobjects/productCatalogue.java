@@ -1,12 +1,11 @@
-package Rahulshettyacademy.pageobjects;
+package Rahulshettyacademy.tests.pageobjects;
 
-import Rahulshettyacademy.AbstractComponent.abstractcomponent;
+import Rahulshettyacademy.tests.AbstractComponent.abstractcomponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 

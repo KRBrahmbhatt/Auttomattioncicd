@@ -1,26 +1,23 @@
-package Rahulshettyacademy.pageobjects;
+package Rahulshettyacademy.tests.pageobjects;
 
+import Rahulshettyacademy.tests.Testcomponents.BaseTest;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
-import java.util.stream.Stream;
 
-public class StandaloneTest {
-    public static void main(String[] args) throws InterruptedException {
+public class StandaloneTest extends BaseTest {
+
+        @Test
+        public void StandalonedTest() throws IOException, InterruptedException {
+
         String productname = "ADIDAS ORIGINAL";
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        landingpage landingpage = new landingpage(driver);
-        landingpage.goTo();
         productCatalogue productCatalogue = landingpage.loginapplication("drdoom@yopmail.com","Test@123");
+
         List<WebElement>   pro  =productCatalogue.getProductLiist();
         productCatalogue.addProductToCart(productname);
         CartPage cartPage= productCatalogue.goTOCartPage();
@@ -31,7 +28,8 @@ public class StandaloneTest {
         Confirmationpage confirmationpage = checkoutPage.submitOrder();
         String confirmmessage = confirmationpage.getConfirmationMessage();
         Assert.assertTrue(confirmmessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
-        driver.quit();
+
+
 
 
 

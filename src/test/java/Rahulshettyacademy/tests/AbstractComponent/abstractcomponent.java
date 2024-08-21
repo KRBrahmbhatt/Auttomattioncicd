@@ -1,6 +1,6 @@
-package Rahulshettyacademy.AbstractComponent;
+package Rahulshettyacademy.tests.AbstractComponent;
 
-import Rahulshettyacademy.pageobjects.CartPage;
+import Rahulshettyacademy.tests.pageobjects.CartPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +25,10 @@ public class abstractcomponent {
     public void waitForElementTOAppear(By findBy) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until((ExpectedConditions.visibilityOfElementLocated(findBy)));
+    }
+    public void waitForElementTOAppear(WebElement findBy) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(findBy));
     }
     public CartPage goTOCartPage() {
 
