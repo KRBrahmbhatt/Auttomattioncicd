@@ -1,6 +1,6 @@
-package Rahulshettyacademy.tests.pageobjects;
+package tests;
 
-import Rahulshettyacademy.tests.AbstractComponent.abstractcomponent;
+import Rahulshettyacademy.AbstractComponent.abstractcomponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +27,7 @@ public class landingpage  extends abstractcomponent {
 
         public productCatalogue loginapplication(String email , String password1)
         {
+            System.out.println("INNNNNNNNNNNN");
             useremail.sendKeys(email);
             password.sendKeys(password1);
             submitbutton.click();

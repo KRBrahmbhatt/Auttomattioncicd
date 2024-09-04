@@ -1,6 +1,7 @@
-package Rahulshettyacademy.tests.pageobjects;
+package pageobjects;
 
-import Rahulshettyacademy.tests.AbstractComponent.abstractcomponent;
+//import Rahulshettyacademy.tests.AbstractComponent.abstractcomponent;
+import Rahulshettyacademy.AbstractComponent.abstractcomponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

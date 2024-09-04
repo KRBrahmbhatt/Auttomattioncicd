@@ -1,8 +1,8 @@
-package Rahulshettyacademy.tests.pageobjects;
+package pageobjects;
 
-import Rahulshettyacademy.tests.AbstractComponent.abstractcomponent;
+//import Rahulshettyacademy.tests.AbstractComponent.abstractcomponent;
+import Rahulshettyacademy.AbstractComponent.abstractcomponent;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
